@@ -1,0 +1,38 @@
+@import '../../assets/scss/mixin.scss';
+.site-footer-list{
+    display: flex;
+    @include list-unstyle;
+    color: #fff;
+}
+.site-footer-list__item{
+    &:last-child h3{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    &:not(:last-child){
+        margin-right: 100px;
+    }
+}
+.stie-footer-list__head{
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+}
+.site-footer-list__list{
+    @include list-unstyle;
+}
+.site-footer-list__list-item{
+    &:not(:last-child){
+        margin-bottom: 15px;
+    }
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+@include media(545px){
+    .site-footer-list{
+        flex-direction: column;
+    }
+}

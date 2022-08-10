@@ -1,0 +1,40 @@
+@import "../../assets/scss/mixin.scss";
+.site-nav__wrraper{
+    margin-bottom: 129px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+@include media (800px){
+    .site-nav__wrraper--open{
+        display: flex;
+    }
+    .site-nav{
+        display: none;
+        &--open{
+            position: absolute;
+            z-index: 1;
+            right: calc(50% - 335px);
+            top: 126px;
+            width: 100%;
+            display: block;
+            background-color: #fff;
+        }
+    }
+}
+@include media (600px){
+    .site-nav--open{
+        right: calc(50% - 260px);
+    }
+}
+@include media (500px){
+    .site-nav--open{
+        right: calc(50% - 200px);
+    }
+}
+@include media (400px){
+    .site-nav--open{
+        right: calc(50% - 150px);
+    }
+}

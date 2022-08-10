@@ -1,0 +1,36 @@
+@import "../../assets/scss/mixin.scss";
+.site-logo{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    color: #000000;
+    &::before{
+        margin-right: 15px;
+        display: inline-block;
+        width: 58px;
+        height: 58px;
+        vertical-align: middle;
+        background-image: url('../../assets/img/logo.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+    }
+    &--response{
+        display: none;
+    }
+    &--open{
+        display: inline-flex;
+        align-items: center;
+        
+    }
+}
+@include media(500px){
+    .site-logo{
+        &::before{
+            width: 33px;
+            height: 33px;
+        }
+    }
+}

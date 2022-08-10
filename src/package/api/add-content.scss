@@ -1,0 +1,117 @@
+@import '../../assets/scss/mixin.scss';
+.add-content__btn{
+    padding: 13px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #FFBA9D;
+    &--none{
+        pointer-events: none;
+    }
+}
+.add-content__wrraper{
+    padding: 50px;
+    display: none;
+    z-index: 10;
+    top: 173px;
+    right: calc(50% + -187px);
+    background-color: #fff;
+    animation: modal cubic-bezier(.09,.96,.97,.99) 0.5s  alternate;
+    &--open{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+    }
+}
+.add-content__input{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    outline: none;
+    font-weight: bolder;
+    font-size: 15;
+    line-height: 1.5;
+    color: #000;
+    &::placeholder{
+        font-weight: 500;
+        font-size: 15;
+        line-height: 1.5;
+        text-transform: capitalize;
+        color: #000;
+    }
+}
+.add-content__select{
+    margin-bottom: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    outline: none;
+    border: none;
+    background-color: #f0f0f0;
+}
+.add-content__add{
+    padding: 13px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #FFBA9D;
+    &--close{
+        display: none;
+    }
+}
+.add-content__edit{
+    background-color: #000;
+}
+@keyframes modal {
+    from{
+        transform: translateY(-100px);
+    }
+}
+@include media (700px){
+    .add-content__wrraper{
+        right: calc(50% + -241px);
+    }
+}
+@include media (500px){
+    .add-content__wrraper{
+        max-width: 350px;
+        right: calc(50% + -180px);
+    }
+    .add-content__input{
+        max-width: 256px;
+    }
+}
+@include media (350px){
+    .add-content__wrraper{
+        max-width: 250px;
+        right: calc(50% + -180px);
+    }
+    .add-content__input{
+        max-width: 200px;
+    }
+}
+@include media (334px){
+    .add-content__wrraper{
+        max-width: 280px;
+        right: calc(50% + -131px);
+    }
+    .add-content__input{
+        max-width: 190px;
+    }
+}
